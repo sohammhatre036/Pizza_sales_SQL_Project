@@ -27,7 +27,7 @@ Tables include
   ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/c06b1a72-c610-4c80-834b-2ba50ebfab31)
 
 
-3. Identify the highest-priced pizza.
+# 3. Identify the highest-priced pizza.
 
 	SELECT p.price , pt.name 
 	FROM pizzas p
@@ -35,10 +35,11 @@ Tables include
 	ORDER BY price DESC
 	LIMIT 1;
 
- 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/83bf739d-fc87-4071-acf5-b43d44d63f19)
+ 	
+  ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/83bf739d-fc87-4071-acf5-b43d44d63f19)
 
 
-4. Identify the most common pizza size ordered.
+# 4. Identify the most common pizza size ordered.
 
 	SELECT size, COUNT(*) AS order_count
 	FROM order_details
@@ -47,10 +48,11 @@ Tables include
 	ORDER BY order_count DESC
 	LIMIT 1;
 
- 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/17d9b0d9-91b4-4fa5-95ff-015308771063)
+ 	
+  ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/17d9b0d9-91b4-4fa5-95ff-015308771063)
 
 
-6. List the top 5 most ordered pizza types along with their quantities.
+# 5. List the top 5 most ordered pizza types along with their quantities.
 
 	SELECT pizza_type, COUNT(*) AS total_orders
 	FROM order_details
@@ -59,11 +61,12 @@ Tables include
 	ORDER BY total_orders DESC
 	LIMIT 5;
 
-	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/0a583d17-9096-473e-835d-258588ef1663)
+	
+ ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/0a583d17-9096-473e-835d-258588ef1663)
 
 
 
-8. Join the necessary tables to find the total quantity of each pizza category ordered.
+# 6. Join the necessary tables to find the total quantity of each pizza category ordered.
 
 	SELECT pizza_types.category , SUM(order_details.quantity) as Quantity
 	FROM pizza_types
@@ -72,21 +75,23 @@ Tables include
 	GROUP BY category
 	ORDER BY Quantity DESC;
 
-	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/829ece28-f596-48b6-993d-a9133f9571ac)
+	
+ ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/829ece28-f596-48b6-993d-a9133f9571ac)
 
 
 
-10. Determine the distribution of orders by hour of the day.
+# 7. Determine the distribution of orders by hour of the day.
 
 	SELECT EXTRACT(HOUR FROM order_time) as hours, COUNT(order_id) AS Orders 
 	FROM orders
 	GROUP BY hours
 	ORDER BY orders DESC;
 
- 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/9c635bdd-4714-4f9a-92e1-b5f20dbbff49)
+ 	
+  ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/9c635bdd-4714-4f9a-92e1-b5f20dbbff49)
 
 
-12. Group the orders by date and calculate the average number of pizzas ordered per day.
+# 8. Group the orders by date and calculate the average number of pizzas ordered per day.
 
 	SELECT ROUND(AVG(quantity),0) 
 	FROM 
@@ -96,10 +101,11 @@ Tables include
 	JOIN order_details ON orders.order_id = order_details.order_id
 	GROUP BY orders.order_date) AS order_quantity;
 
-	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/e71ee3fb-a5f8-47f9-8787-ea2b5214c581)
+	
+ ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/e71ee3fb-a5f8-47f9-8787-ea2b5214c581)
 
 
-14. Determine the top 3 most ordered pizza types based on revenue.
+# 9. Determine the top 3 most ordered pizza types based on revenue.
 
 	SELECT pizza_types.name , SUM(order_details.quantity * pizzas.price) as Revenue
 	FROM pizza_types
@@ -109,5 +115,6 @@ Tables include
 	ORDER BY Revenue DESC
 	LIMIT 3;
 
-	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/fa225fc8-a834-4b84-bce5-060f4dbf45ed)
+	
+ ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/fa225fc8-a834-4b84-bce5-060f4dbf45ed)
 
