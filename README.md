@@ -16,7 +16,7 @@ Tables include
 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/28f06904-5949-4522-b857-191a8e699d6d)
 
 
-2. Calculate the total revenue generated from pizza sales.
+# 2. Calculate the total revenue generated from pizza sales.
 
 	SELECT SUM(od.quantity * p.price) AS total_revenue
 	FROM order_details od
