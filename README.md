@@ -1,4 +1,13 @@
-# Pizza Sales Sql Project
+# Pizza Sales Analysis using PostgreSQL
+Overview:
+The project aims to analyze sales data from a fictional pizza store using PostgreSQL. It involves designing a database schema to store information about customers, orders, pizzas, ingredients, and sales transactions. The data is then queried to derive insights such as total revenue, popular pizza types, customer preferences, and peak sales periods.
+
+# Database Schema Design:
+Tables include 
+1. orders
+2.Order Details
+3. Pizzas
+4. Pizza Types
 # Questions 
 1. Retrieve the total number of orders placed.
 
