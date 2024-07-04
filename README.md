@@ -2,24 +2,30 @@
 # Questions 
 1. Retrieve the total number of orders placed.
 
-Select Count(order_id) as Total_orders_placed from orders;
+	Select Count(order_id) as Total_orders_placed from orders;
 
-![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/28f06904-5949-4522-b857-191a8e699d6d)
+	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/28f06904-5949-4522-b857-191a8e699d6d)
 
 
--- Calculate the total revenue generated from pizza sales.
+2. Calculate the total revenue generated from pizza sales.
 
-SELECT SUM(od.quantity * p.price) AS total_revenue
-FROM order_details od
-JOIN pizzas p ON od.pizza_id = p.pizza_id;
+	SELECT SUM(od.quantity * p.price) AS total_revenue
+	FROM order_details od
+	JOIN pizzas p ON od.pizza_id = p.pizza_id;
 
--- Identify the highest-priced pizza.
+ 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/c06b1a72-c610-4c80-834b-2ba50ebfab31)
 
-SELECT p.price , pt.name 
-FROM pizzas p
-join pizza_types pt ON p.pizza_type = pt.pizza_type
-ORDER BY price DESC
-LIMIT 1;
+
+3. Identify the highest-priced pizza.
+
+	SELECT p.price , pt.name 
+	FROM pizzas p
+	join pizza_types pt ON p.pizza_type = pt.pizza_type
+	ORDER BY price DESC
+	LIMIT 1;
+
+ 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/83bf739d-fc87-4071-acf5-b43d44d63f19)
+
 
 --Identify the most common pizza size ordered.
 
