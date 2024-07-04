@@ -4,8 +4,8 @@ The project aims to analyze sales data from a fictional pizza store using Postgr
 
 # Database Schema Design:
 Tables include 
-1. orders
-2.Order Details
+1. Orders
+2. Order Details
 3. Pizzas
 4. Pizza Types
 # Questions 
