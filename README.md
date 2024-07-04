@@ -9,7 +9,7 @@ Tables include
 3. Pizzas
 4. Pizza Types
 # Questions 
-**1. Retrieve the total number of orders placed.**
+#1. Retrieve the total number of orders placed.
 
 	Select Count(order_id) as Total_orders_placed from orders;
 
