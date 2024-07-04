@@ -13,7 +13,8 @@ Tables include
 
 	Select Count(order_id) as Total_orders_placed from orders;
 
-	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/28f06904-5949-4522-b857-191a8e699d6d)
+	
+ ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/28f06904-5949-4522-b857-191a8e699d6d)
 
 
 # 2. Calculate the total revenue generated from pizza sales.
@@ -22,7 +23,8 @@ Tables include
 	FROM order_details od
 	JOIN pizzas p ON od.pizza_id = p.pizza_id;
 
- 	![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/c06b1a72-c610-4c80-834b-2ba50ebfab31)
+ 	
+  ![image](https://github.com/sohammhatre036/Pizza_sales_SQL_Project/assets/131856125/c06b1a72-c610-4c80-834b-2ba50ebfab31)
 
 
 3. Identify the highest-priced pizza.
